@@ -35,13 +35,43 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CatNameCell" id="tAf-pA-AVD">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CatNameCell" rowHeight="79" id="tAf-pA-AVD" customClass="CatNameCell" customModule="theCat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tAf-pA-AVD" id="JFr-Vh-IGV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3W-6P-Yyr">
+                                                    <rect key="frame" x="20" y="11" width="374" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="WQV-7J-3jt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7A8-td-aeQ">
+                                                    <rect key="frame" x="20" y="31.5" width="374" height="34.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7A8-td-aeQ" firstAttribute="top" secondItem="I3W-6P-Yyr" secondAttribute="bottom" id="2ox-uJ-94Z"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="I3W-6P-Yyr" secondAttribute="trailing" id="7tV-Lz-yws"/>
+                                                <constraint firstItem="I3W-6P-Yyr" firstAttribute="leading" secondItem="JFr-Vh-IGV" secondAttribute="leadingMargin" id="9pf-5r-PV5"/>
+                                                <constraint firstItem="7A8-td-aeQ" firstAttribute="leading" secondItem="JFr-Vh-IGV" secondAttribute="leadingMargin" id="AmU-c0-6sE"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7A8-td-aeQ" secondAttribute="bottom" constant="2" id="IZV-WW-e8t"/>
+                                                <constraint firstItem="I3W-6P-Yyr" firstAttribute="top" secondItem="JFr-Vh-IGV" secondAttribute="topMargin" id="L97-6s-iDL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7A8-td-aeQ" secondAttribute="trailing" id="s7J-yC-nf9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="I3W-6P-Yyr" id="35d-QH-Nhs"/>
+                                            <outlet property="originLabel" destination="7A8-td-aeQ" id="MTn-3e-rQS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

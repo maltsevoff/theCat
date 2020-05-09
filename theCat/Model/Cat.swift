@@ -12,5 +12,6 @@ struct Cat: Hashable, Codable {
 	
 	let id: String
 	let name: String
+	let origin: String
 	
 }

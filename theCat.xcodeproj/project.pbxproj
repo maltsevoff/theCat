@@ -17,6 +17,7 @@
 		A6C2EE8124614A3E00D44D21 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2EE8024614A3E00D44D21 /* Model.swift */; };
 		A6C2EE8724648A4200D44D21 /* CatsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2EE8624648A4200D44D21 /* CatsManager.swift */; };
 		A6C2EE8A24648C3A00D44D21 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2EE8924648C3A00D44D21 /* Cat.swift */; };
+		A6C2EE8C2466960000D44D21 /* CatNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2EE8B2466960000D44D21 /* CatNameCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A6C2EE8024614A3E00D44D21 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A6C2EE8624648A4200D44D21 /* CatsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsManager.swift; sourceTree = "<group>"; };
 		A6C2EE8924648C3A00D44D21 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		A6C2EE8B2466960000D44D21 /* CatNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatNameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				A6C2EE6B2460495A00D44D21 /* SceneDelegate.swift */,
 				A6C2EE7D24604EC200D44D21 /* CatsApiRequests.swift */,
 				A6C2EE8624648A4200D44D21 /* CatsManager.swift */,
+				A6C2EE8B2466960000D44D21 /* CatNameCell.swift */,
 				A6C2EE8824648C2100D44D21 /* Model */,
 				A6C2EE7F24614A0B00D44D21 /* Controllers */,
 				A6C2EE6F2460495A00D44D21 /* Main.storyboard */,
@@ -171,6 +174,7 @@
 				A6C2EE6E2460495A00D44D21 /* ViewController.swift in Sources */,
 				A6C2EE7E24604EC200D44D21 /* CatsApiRequests.swift in Sources */,
 				A6C2EE6A2460495A00D44D21 /* AppDelegate.swift in Sources */,
+				A6C2EE8C2466960000D44D21 /* CatNameCell.swift in Sources */,
 				A6C2EE6C2460495A00D44D21 /* SceneDelegate.swift in Sources */,
 				A6C2EE8724648A4200D44D21 /* CatsManager.swift in Sources */,
 			);

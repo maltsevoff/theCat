@@ -28,6 +28,11 @@ class ViewController: UIViewController {
 		self.catsTableView.dataSource = self
 		self.catsManager.delegate = self
 		self.catsManager.updateCatsList()
+		setTitle()
+	}
+	
+	private func setTitle() {
+		navigationItem.title = "Cats"
 	}
 }
 
@@ -38,8 +43,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = self.catsTableView.dequeueReusableCell(withIdentifier: self.catNameCellId, for: indexPath)
-		cell.textLabel?.text = self.cats[indexPath.row].name
+		let cell = self.catsTableView.dequeueReusableCell(withIdentifier: self.catNameCellId, for: indexPath) as! CatNameCell
+		cell.name = self.cats[indexPath.row].name
+		cell.origin = self.cats[indexPath.row].origin
 		
 		return cell
 	}
