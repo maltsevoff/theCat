@@ -23,6 +23,7 @@ class CatsApiRequests {
 		let task = URLSession.shared.dataTask(with: request) { data, res, error in
 			if let data = data {
 				let decoder = JSONDecoder()
+				decoder.keyDecodingStrategy = .convertFromSnakeCase
 				
 				let json = try? decoder.decode([Cat].self, from: data)
 				handler(json ?? [])

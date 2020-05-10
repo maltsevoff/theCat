@@ -18,6 +18,7 @@ class ViewController: UIViewController {
 		}
 	}
 	private let catNameCellId = "CatNameCell"
+	private let catDetailControllerId = "CatDetailController"
 	private let catsManager = CatsManager()
 	
 	override func viewDidLoad() {
@@ -32,8 +33,15 @@ class ViewController: UIViewController {
 	}
 	
 	private func setTitle() {
-		navigationItem.title = "Cats"
+		navigationItem.title = "Cats 🐱"
 	}
+	
+	private func showCatDetailController(for cat: Cat) {
+		let vc = storyboard?.instantiateViewController(withIdentifier: self.catDetailControllerId) as! CatDetailController
+		vc.cat = cat
+		navigationController?.pushViewController(vc, animated: true)
+	}
+	
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -50,6 +58,11 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let cat = self.cats[indexPath.row]
+		self.catsTableView.deselectRow(at: indexPath, animated: true)
+		self.showCatDetailController(for: cat)
+	}
 }
 
 extension ViewController: CatsManagerDelegate {
