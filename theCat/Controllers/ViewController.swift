@@ -33,7 +33,7 @@ class ViewController: UIViewController {
 	}
 	
 	private func setTitle() {
-		navigationItem.title = "Cats 🐱"
+		navigationItem.title = "Cats 🐈"
 	}
 	
 	private func showCatDetailController(for cat: Cat) {

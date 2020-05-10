@@ -40,6 +40,7 @@ extension CatDetailController: UITableViewDelegate, UITableViewDataSource {
 		cell.origin = self.cat?.countryCode
 		cell.temperament = self.cat?.temperament
 		cell.catDescription = self.cat?.description
+		cell.selectionStyle = .none
 		
 		return cell
 	}
