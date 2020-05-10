@@ -18,6 +18,7 @@ class CatsManager {
 	
 	private var cats: [Cat] = []
 	private var catsApi = CatsApiRequests()
+	private var currentPage: Int = 0
 	
 	func updateCatsList() {
 		catsApi.getBreeds() { newCats in
