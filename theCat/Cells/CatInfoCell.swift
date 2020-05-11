@@ -14,6 +14,10 @@ class CatInfoCell: UITableViewCell {
 	@IBOutlet weak var originLabel: UILabel!
 	@IBOutlet weak var descriptionLabel: UILabel!
 	@IBOutlet weak var temperamentLabel: UILabel!
+	@IBOutlet weak var wikipediaButton: UIButton!
+	@IBAction func wikipediaButtonDidPress(_ sender: UIButton) {
+		openWikiLink()
+	}
 	
 	var breed: String? {
 		didSet {
@@ -34,5 +38,22 @@ class CatInfoCell: UITableViewCell {
 		didSet {
 			self.temperamentLabel.text = temperament
 		}
+	}
+	var wikipediaLink: String? {
+		didSet {
+			checkWikipediaLink()
+		}
+	}
+	
+	private func checkWikipediaLink() {
+		if self.wikipediaLink == nil {
+			self.wikipediaButton.isHidden = true
+		}
+	}
+	
+	private func openWikiLink() {
+		guard let stringUrl = self.wikipediaLink,
+			let url = URL(string: stringUrl) else { return }
+		UIApplication.shared.open(url)
 	}
 }

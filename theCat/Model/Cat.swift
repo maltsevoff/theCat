@@ -16,5 +16,6 @@ struct Cat: Hashable, Codable {
 	let temperament: String
 	let description: String
 	let countryCode: String
+	let wikipediaUrl: String?
 	
 }
