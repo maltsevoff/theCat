@@ -79,6 +79,8 @@ extension CatDetailController: UITableViewDelegate, UITableViewDataSource {
 		let cellFeature = self.features[indexPath.row - 1]
 		let cell = self.detailTableView.dequeueReusableCell(withIdentifier: self.featureCellId, for: indexPath) as! CatsFeatureCell
 		cell.feature = cellFeature.0
+		cell.featureValue = cellFeature.1
+		cell.selectionStyle = .none
 		
 		return cell
 	}
