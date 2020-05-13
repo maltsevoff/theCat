@@ -20,6 +20,7 @@ class ViewController: UIViewController {
 	}
 	private let catNameCellId = "CatNameCell"
 	private let catDetailControllerId = "CatDetailController"
+	private let quizControllerId = "QuizController"
 	private let catsManager = CatsManager()
 	
 	override func viewDidLoad() {
@@ -49,12 +50,24 @@ class ViewController: UIViewController {
 	}
 	
 	@objc private func quizButtonDidSet(_ sender: UIButton!) {
-		print("Quiz button pressed")
+		showQuizController()
 	}
 	
 	private func showCatDetailController(for cat: Cat) {
 		let vc = storyboard?.instantiateViewController(withIdentifier: self.catDetailControllerId) as! CatDetailController
 		vc.cat = cat
+		navigationController?.pushViewController(vc, animated: true)
+	}
+	
+	private func showQuizController() {
+		let vc = storyboard?.instantiateViewController(withIdentifier: self.quizControllerId) as! QuizController
+		let transition:CATransition = CATransition()
+		transition.duration = 0.5
+		transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+		transition.type = CATransitionType.push
+		transition.subtype = CATransitionSubtype.fromTop
+		navigationController?.view.layer.add(transition, forKey: kCATransition)
+		navigationController?.popViewController(animated: true)
 		navigationController?.pushViewController(vc, animated: true)
 	}
 	
