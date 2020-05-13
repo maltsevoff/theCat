@@ -22,6 +22,9 @@ struct Cat: Hashable, Codable {
 	let dogFriendly: Int?
 	let intelligence: Int?
 	let strangerFriendly: Int?
+	let healthIssues: Int?
+	let energyLevel: Int?
+	let socialNeeds: Int?
 	
 	var isRare: Bool { self.rare == 1 }
 	
@@ -31,6 +34,9 @@ struct Cat: Hashable, Codable {
 			("Dog friendly", self.dogFriendly),
 			("Intelligence", self.intelligence),
 			("Stranger friendly", self.strangerFriendly),
+			("Health issues", self.healthIssues),
+			("Energy level", self.energyLevel),
+			("Social needs", self.socialNeeds)
 		]
 	}
 	
