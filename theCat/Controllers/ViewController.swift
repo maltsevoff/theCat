@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
 	@IBOutlet weak var catsTableView: UITableView!
+	private let quizButton = QuizButton()
 	
 	private var cats: [Cat] = [] {
 		didSet {
@@ -30,10 +31,25 @@ class ViewController: UIViewController {
 		self.catsManager.delegate = self
 		self.catsManager.updateCatsList()
 		setTitle()
+		setQuizButton()
 	}
 	
 	private func setTitle() {
 		navigationItem.title = "Cats 🐈"
+	}
+	
+	private func setQuizButton() {
+		view.addSubview(quizButton)
+		quizButton.translatesAutoresizingMaskIntoConstraints = false
+		quizButton.bottomAnchor.constraint(equalTo: catsTableView.bottomAnchor, constant: -10).isActive = true
+		quizButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+		quizButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+		quizButton.centerXAnchor.constraint(equalTo: catsTableView.centerXAnchor).isActive = true
+		quizButton.addTarget(self, action: #selector(quizButtonDidSet(_:)), for: .touchUpInside)
+	}
+	
+	@objc private func quizButtonDidSet(_ sender: UIButton!) {
+		print("Quiz button pressed")
 	}
 	
 	private func showCatDetailController(for cat: Cat) {
