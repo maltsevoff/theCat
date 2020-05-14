@@ -22,9 +22,9 @@ class QuizButton: UIButton {
 	}
 	
 	private func setText() {
-		titleLabel?.textColor = .black
 		titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)
 		setTitle("QUIZ", for: .normal)
+		setTitleColor(.white, for: .normal)
 	}
 	
 	private func addShadow() {
