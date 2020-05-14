@@ -10,9 +10,6 @@ import UIKit
 
 class QuizController: UIViewController {
 	
-	@IBOutlet weak var questionImageView: UIImageView!
-	
-	@IBOutlet weak var testLabel: UILabel!
 	private let catsApi = CatsApiRequests()
 	
 	override func viewDidLoad() {
