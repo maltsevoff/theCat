@@ -53,7 +53,7 @@ class ViewController: UIViewController {
 	private func setQuizButton() {
 		view.addSubview(quizButton)
 		quizButton.translatesAutoresizingMaskIntoConstraints = false
-		quizButton.bottomAnchor.constraint(equalTo: catsTableView.bottomAnchor, constant: -10).isActive = true
+		quizButton.bottomAnchor.constraint(equalTo: catsTableView.bottomAnchor, constant: -20).isActive = true
 		quizButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
 		quizButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
 		quizButton.centerXAnchor.constraint(equalTo: catsTableView.centerXAnchor).isActive = true
