@@ -10,6 +10,7 @@ import UIKit
 
 class AnswerButton: UIButton {
 	
+	var answer: String?
 	private let shadowColor = UIColor.black.cgColor
 	
 	override func awakeFromNib() {
@@ -18,6 +19,23 @@ class AnswerButton: UIButton {
 		addRoundCorners(radius: 5)
 		setFont()
 		addShadow()
+	}
+	
+	func setAnswer(_ answer: String) {
+		self.answer = answer
+		setTitle(answer, for: .normal)
+	}
+	
+	func setCorrectAnsweColor() {
+		backgroundColor = .green
+	}
+	
+	func setWrongAnswerColor() {
+		backgroundColor = .red
+	}
+	
+	func resetColor() {
+		backgroundColor = .orange
 	}
 	
 	private func addRoundCorners(radius: CGFloat) {

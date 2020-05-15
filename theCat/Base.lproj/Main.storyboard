@@ -118,11 +118,17 @@
                                                     <constraint firstAttribute="height" constant="40" id="nr5-lW-pUH"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="firstButtonPressed:" destination="AaP-Bu-O2L" eventType="touchUpInside" id="cxB-XT-sLS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gA-aP-pS3" customClass="AnswerButton" customModule="theCat" customModuleProvider="target">
                                                 <rect key="frame" x="222" y="0.0" width="172" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="secondButtonPressed:" destination="AaP-Bu-O2L" eventType="touchUpInside" id="yDV-yU-1uD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -133,19 +139,29 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="thirdButtonPressed:" destination="AaP-Bu-O2L" eventType="touchUpInside" id="4eu-bt-CQS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYh-mi-ySS" customClass="AnswerButton" customModule="theCat" customModuleProvider="target">
                                                 <rect key="frame" x="222" y="0.0" width="172" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="fourthButtonPressed:" destination="AaP-Bu-O2L" eventType="touchUpInside" id="8uB-Pc-Ir6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="htu-qa-VDH">
+                                <rect key="frame" x="197" y="168.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="htu-qa-VDH" firstAttribute="centerY" secondItem="g4d-HR-X6F" secondAttribute="centerY" id="2wu-6L-k78"/>
                             <constraint firstItem="g4d-HR-X6F" firstAttribute="top" secondItem="pFP-uH-pnQ" secondAttribute="top" id="BS5-gd-psS"/>
                             <constraint firstItem="eNO-Xj-1Aj" firstAttribute="top" secondItem="g4d-HR-X6F" secondAttribute="bottom" constant="30" id="cpw-93-zaV"/>
                             <constraint firstItem="g4d-HR-X6F" firstAttribute="leading" secondItem="pFP-uH-pnQ" secondAttribute="leading" id="dub-cI-5Ho"/>
@@ -153,11 +169,17 @@
                             <constraint firstItem="pFP-uH-pnQ" firstAttribute="trailing" secondItem="eNO-Xj-1Aj" secondAttribute="trailing" constant="10" id="izH-n8-2K0"/>
                             <constraint firstItem="pFP-uH-pnQ" firstAttribute="trailing" secondItem="g4d-HR-X6F" secondAttribute="trailing" id="u9c-SE-ba9"/>
                             <constraint firstItem="g4d-HR-X6F" firstAttribute="height" secondItem="jd4-mI-gWf" secondAttribute="height" multiplier="0.3" id="uKD-nC-FKn"/>
+                            <constraint firstItem="htu-qa-VDH" firstAttribute="centerX" secondItem="g4d-HR-X6F" secondAttribute="centerX" id="vfd-2h-ftX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pFP-uH-pnQ"/>
                     </view>
                     <connections>
+                        <outlet property="imageActivityIndicator" destination="htu-qa-VDH" id="63c-Hk-kGh"/>
                         <outlet property="questionImageView" destination="g4d-HR-X6F" id="Ibe-53-OCv"/>
+                        <outletCollection property="answerButtons" destination="HHY-j8-0dQ" collectionClass="NSMutableArray" id="zQn-c7-ldV"/>
+                        <outletCollection property="answerButtons" destination="8gA-aP-pS3" collectionClass="NSMutableArray" id="Zf7-75-21k"/>
+                        <outletCollection property="answerButtons" destination="i3B-VQ-871" collectionClass="NSMutableArray" id="ktR-7C-vq4"/>
+                        <outletCollection property="answerButtons" destination="HYh-mi-ySS" collectionClass="NSMutableArray" id="sbo-7s-Uqp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qmc-kL-qtd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

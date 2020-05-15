@@ -6,7 +6,7 @@
 //  Copyright © 2020 Aleksandr Maltsev. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class CatsApiRequests {
 	
@@ -33,7 +33,7 @@ class CatsApiRequests {
 		task.resume()
 	}
 	
-	func getImageByBreed(id: String, handler: @escaping (CatImage?) -> ()) {
+	func getImageByBreed(id: String, handler: @escaping (UIImage?) -> ()) {
 		let stringUrl = self.baseUrl + "images/search"
 		guard let url = URL(string: stringUrl) else { return }
 		
@@ -44,10 +44,28 @@ class CatsApiRequests {
 				let decoder = JSONDecoder()
 				
 				let json = try? decoder.decode([CatImage].self, from: data)
-				handler(json?.first)
+				let image = self.parseCatImage(json?.first)
+				handler(image)
+			} else {
+				handler(nil)
 			}
 		}
 		task.resume()
+	}
+	
+	private func parseCatImage(_ catImage: CatImage?) -> UIImage? {
+		if let stringUrl = catImage?.url, let url = URL(string: stringUrl) {
+			do {
+				let imageData = try Data(contentsOf: url)
+				let image = UIImage(data: imageData)
+				return image
+			} catch let error {
+				print(error.localizedDescription)
+				return nil
+			}
+		} else {
+			return nil
+		}
 	}
 	
 }
