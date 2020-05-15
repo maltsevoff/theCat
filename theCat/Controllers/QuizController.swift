@@ -29,7 +29,7 @@ class QuizController: UIViewController {
 	
 	private let catsApi = CatsApiRequests()
 	private let catsManager = CatsManager()
-	private let alertMessage = "Ouuups... Something went wront. Let's playe another time."
+	private let alertMessage = "Ouuups... Something went wrong. Let's playe another time."
 	private var question: Question?
 	
 	override func viewDidLoad() {
@@ -99,13 +99,13 @@ class QuizController: UIViewController {
 				if let validImage = image {
 					self.questionImageView.image = validImage
 				} else {
-					self.showNoInternetAlert()
+					self.showErrorAlert()
 				}
 			}
 		}
 	}
 	
-	private func showNoInternetAlert() {
+	private func showErrorAlert() {
 		let alert = UIAlertController(title: "Error", message: alertMessage, preferredStyle: .alert)
 		let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
 		alert.addAction(okAction)
