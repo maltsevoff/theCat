@@ -13,6 +13,7 @@
 		A6529E7D246AEF7200763DE0 /* CatsFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6529E7C246AEF7200763DE0 /* CatsFeatureCell.swift */; };
 		A6529E7F246C08F700763DE0 /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6529E7E246C08F600763DE0 /* QuizButton.swift */; };
 		A6529E83246C484100763DE0 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6529E82246C484100763DE0 /* QuizController.swift */; };
+		A6529E85246DC02900763DE0 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6529E84246DC02900763DE0 /* AnswerButton.swift */; };
 		A6C2EE6A2460495A00D44D21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2EE692460495A00D44D21 /* AppDelegate.swift */; };
 		A6C2EE6C2460495A00D44D21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2EE6B2460495A00D44D21 /* SceneDelegate.swift */; };
 		A6C2EE6E2460495A00D44D21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C2EE6D2460495A00D44D21 /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		A6529E7C246AEF7200763DE0 /* CatsFeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsFeatureCell.swift; sourceTree = "<group>"; };
 		A6529E7E246C08F600763DE0 /* QuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButton.swift; sourceTree = "<group>"; };
 		A6529E82246C484100763DE0 /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
+		A6529E84246DC02900763DE0 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		A6C2EE662460495A00D44D21 /* theCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C2EE692460495A00D44D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6C2EE6B2460495A00D44D21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				A6C2EE7D24604EC200D44D21 /* CatsApiRequests.swift */,
 				A6529E7E246C08F600763DE0 /* QuizButton.swift */,
 				A6C2EE8624648A4200D44D21 /* CatsManager.swift */,
+				A6529E84246DC02900763DE0 /* AnswerButton.swift */,
 				A6529E792468173F00763DE0 /* Cells */,
 				A6C2EE8824648C2100D44D21 /* Model */,
 				A6C2EE7F24614A0B00D44D21 /* Controllers */,
@@ -200,6 +203,7 @@
 				A6C2EE8124614A3E00D44D21 /* Model.swift in Sources */,
 				A6C2EE8A24648C3A00D44D21 /* Cat.swift in Sources */,
 				A6C2EE6E2460495A00D44D21 /* ViewController.swift in Sources */,
+				A6529E85246DC02900763DE0 /* AnswerButton.swift in Sources */,
 				A6C2EE7E24604EC200D44D21 /* CatsApiRequests.swift in Sources */,
 				A6C2EE6A2460495A00D44D21 /* AppDelegate.swift in Sources */,
 				A6C2EE8C2466960000D44D21 /* CatNameCell.swift in Sources */,

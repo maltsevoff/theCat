@@ -30,13 +30,12 @@ class QuizButton: UIButton {
 	private func addShadow() {
 		layer.shadowColor = shadowColor
 		layer.shadowOffset = CGSize(width: 0, height: 4)
-		layer.shadowOpacity = 0.5
-		layer.shadowRadius = 20
+		layer.shadowOpacity = 0.3
+		layer.shadowRadius = 5
 	}
 	
 	private func roundCorners() {
 		layer.cornerRadius = 20
-		layer.masksToBounds = true
 	}
 	
 	required init?(coder: NSCoder) {
