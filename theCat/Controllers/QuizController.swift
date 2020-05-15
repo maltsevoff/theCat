@@ -55,14 +55,18 @@ class QuizController: UIViewController {
 	}
 	
 	private func createNewQuestion() {
-		question = catsManager.createNewQuestion()
-		loadImageFor(breedId: question!.breedId)
+		guard let newQuestion = catsManager.createNewQuestion() else {
+			showErrorAlert()
+			return
+		}
+		self.question = newQuestion
+		loadImageFor(breedId: newQuestion.breedId)
 		answerButtons.forEach { button in
 			button.resetColor()
 			button.isEnabled = true
 		}
 		setNewAnswers()
-		print(question ?? "--No question--")
+		print(newQuestion)
 	}
 	
 	private func checkAnswer(_ answer: String) {
@@ -105,9 +109,15 @@ class QuizController: UIViewController {
 		}
 	}
 	
+	private func popThisController() {
+		navigationController?.popViewController(animated: true)
+	}
+	
 	private func showErrorAlert() {
 		let alert = UIAlertController(title: "Error", message: alertMessage, preferredStyle: .alert)
-		let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+		let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+			self.popThisController()
+		}
 		alert.addAction(okAction)
 		present(alert, animated: true)
 	}

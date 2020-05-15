@@ -29,8 +29,10 @@ class CatsManager {
 		}
 	}
 	
-	func createNewQuestion() -> Question {
+	func createNewQuestion() -> Question? {
 		let shuffled = cats.shuffled()
+		guard shuffled.count >= 4 else { return nil }
+		
 		let fourCats = shuffled[0..<4]
 		let options = fourCats.map { $0.name }
 		let randomNum = Int.random(in: 0..<4)
