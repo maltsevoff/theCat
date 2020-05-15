@@ -62,7 +62,7 @@ class QuizController: UIViewController {
 			button.isEnabled = true
 		}
 		setNewAnswers()
-		print(question)
+		print(question ?? "--No question--")
 	}
 	
 	private func checkAnswer(_ answer: String) {
