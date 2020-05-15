@@ -12,6 +12,11 @@ class ViewController: UIViewController {
 
 	@IBOutlet weak var catsTableView: UITableView!
 	private let quizButton = QuizButton()
+	private let refreshControl: UIRefreshControl = {
+		let control = UIRefreshControl()
+		control.addTarget(self, action: #selector(updateCatsList), for: .valueChanged)
+		return control
+	}()
 	
 	private var cats: [Cat] = [] {
 		didSet {
@@ -27,12 +32,18 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 		
+		self.catsTableView.refreshControl = self.refreshControl
 		self.catsTableView.delegate = self
 		self.catsTableView.dataSource = self
 		self.catsManager.delegate = self
-		self.catsManager.updateCatsList()
+		updateCatsList()
 		setTitle()
 		setQuizButton()
+	}
+	
+	@objc private func updateCatsList() {
+		self.catsManager.updateCatsList()
+		self.refreshControl.endRefreshing()
 	}
 	
 	private func setTitle() {
