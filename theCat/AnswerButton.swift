@@ -32,7 +32,7 @@ class AnswerButton: UIButton {
 	private func addShadow() {
 		layer.shadowColor = UIColor.black.cgColor
 		layer.shadowOpacity = 0.2
-		layer.shadowOffset = .zero
+		layer.shadowOffset = CGSize(width: 0, height: 4)
 		layer.shadowRadius = 5
 	}
 }
