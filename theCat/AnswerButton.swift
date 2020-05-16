@@ -12,6 +12,7 @@ class AnswerButton: UIButton {
 	
 	var answer: String?
 	private let shadowColor = UIColor.black.cgColor
+	private let redColor = UIColor(red: 198 / 255, green: 0, blue: 0, alpha: 1)
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -31,7 +32,7 @@ class AnswerButton: UIButton {
 	}
 	
 	func setWrongAnswerColor() {
-		backgroundColor = .red
+		backgroundColor = self.redColor
 	}
 	
 	func resetColor() {
