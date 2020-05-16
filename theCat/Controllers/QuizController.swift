@@ -110,6 +110,12 @@ class QuizController: UIViewController {
 	}
 	
 	private func popThisController() {
+		let transition: CATransition = CATransition()
+		transition.duration = 0.5
+		transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+		transition.type = CATransitionType.push
+		transition.subtype = CATransitionSubtype.fromBottom
+		navigationController?.view.layer.add(transition, forKey: kCATransition)
 		navigationController?.popViewController(animated: true)
 	}
 	

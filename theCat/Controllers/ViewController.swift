@@ -72,13 +72,13 @@ class ViewController: UIViewController {
 	
 	private func showQuizController() {
 		let vc = storyboard?.instantiateViewController(withIdentifier: self.quizControllerId) as! QuizController
-		let transition:CATransition = CATransition()
+		let transition: CATransition = CATransition()
 		transition.duration = 0.5
-		transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+		transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
 		transition.type = CATransitionType.push
 		transition.subtype = CATransitionSubtype.fromTop
 		navigationController?.view.layer.add(transition, forKey: kCATransition)
-		navigationController?.popViewController(animated: true)
+//		navigationController?.popViewController(animated: true)
 		navigationController?.pushViewController(vc, animated: true)
 	}
 	
