@@ -34,11 +34,10 @@ class CatsApiRequests {
 	}
 	
 	func getImageByBreed(id: String, handler: @escaping (UIImage?) -> ()) {
-		let stringUrl = self.baseUrl + "images/search"
+		let stringUrl = self.baseUrl + "images/search?breed_id=\(id)"
 		guard let url = URL(string: stringUrl) else { return }
 		
-		var request = URLRequest(url: url)
-		request.addValue("breed_id", forHTTPHeaderField: id)
+		let request = URLRequest(url: url)
 		let task = URLSession.shared.dataTask(with: request) { data, res, error in
 			if let data = data {
 				let decoder = JSONDecoder()
