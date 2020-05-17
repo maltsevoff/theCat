@@ -76,9 +76,9 @@ class QuizController: UIViewController {
 		guard let rightAnswer = self.question?.rightAnswer else { return }
 		self.answerButtons.forEach { button in
 			button.isEnabled = false
-			if button.titleLabel?.text == rightAnswer {
+			if button.answer == rightAnswer {
 				button.setCorrectAnsweColor()
-			} else if button.titleLabel?.text == answer {
+			} else if button.answer == answer {
 				button.setWrongAnswerColor()
 			}
 		}
