@@ -35,7 +35,10 @@ class QuizController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-//		navigationController?.navigationBar.isHidden = true
+		self.navigationItem.leftBarButtonItem = UIBarButtonItem()
+		let newEndButton = UIBarButtonItem(title: "End", style: .plain, target: self, action: #selector(popThisController))
+		newEndButton.tintColor = .white
+		self.navigationItem.rightBarButtonItem = newEndButton
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -109,7 +112,7 @@ class QuizController: UIViewController {
 		}
 	}
 	
-	private func popThisController() {
+	@objc private func popThisController() {
 		let transition: CATransition = CATransition()
 		transition.duration = 0.5
 		transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
