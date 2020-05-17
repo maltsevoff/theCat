@@ -73,6 +73,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A6529E8A2471C51200763DE0 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A6529E84246DC02900763DE0 /* AnswerButton.swift */,
+				A6529E7E246C08F600763DE0 /* QuizButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		A6C2EE5D2460495A00D44D21 = {
 			isa = PBXGroup;
 			children = (
@@ -95,9 +104,8 @@
 				A6C2EE692460495A00D44D21 /* AppDelegate.swift */,
 				A6C2EE6B2460495A00D44D21 /* SceneDelegate.swift */,
 				A6C2EE7D24604EC200D44D21 /* CatsApiRequests.swift */,
-				A6529E7E246C08F600763DE0 /* QuizButton.swift */,
 				A6C2EE8624648A4200D44D21 /* CatsManager.swift */,
-				A6529E84246DC02900763DE0 /* AnswerButton.swift */,
+				A6529E8A2471C51200763DE0 /* Buttons */,
 				A6529E792468173F00763DE0 /* Cells */,
 				A6C2EE8824648C2100D44D21 /* Model */,
 				A6C2EE7F24614A0B00D44D21 /* Controllers */,
