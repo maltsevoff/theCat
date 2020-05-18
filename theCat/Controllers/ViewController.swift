@@ -43,7 +43,7 @@ class ViewController: UIViewController {
 	
 	@objc private func updateCatsList() {
 		self.catsManager.updateCatsList()
-		self.refreshControl.endRefreshing()
+		self.refreshControl.beginRefreshing()
 	}
 	
 	private func setTitle() {
@@ -78,8 +78,14 @@ class ViewController: UIViewController {
 		transition.type = CATransitionType.push
 		transition.subtype = CATransitionSubtype.fromTop
 		navigationController?.view.layer.add(transition, forKey: kCATransition)
-//		navigationController?.popViewController(animated: true)
 		navigationController?.pushViewController(vc, animated: true)
+	}
+	
+	private func internetConnectionAlert() {
+		let alert = UIAlertController(title: "Error", message: "Sorry, we can't load cats. Something happende with internet connection.", preferredStyle: .alert)
+		let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+		alert.addAction(okAction)
+		present(alert, animated: true)
 	}
 	
 }
@@ -109,6 +115,9 @@ extension ViewController: CatsManagerDelegate {
 	
 	func didUpdateCatsList(newCats: [Cat]) {
 		self.cats = newCats
+		self.refreshControl.endRefreshing()
+		guard self.cats.isEmpty else { return }
+		self.internetConnectionAlert()
 	}
 	
 }

@@ -27,6 +27,8 @@ class CatsApiRequests {
 				
 				let json = try? decoder.decode([Cat].self, from: data)
 				handler(json ?? [])
+			} else {
+				handler([])
 			}
 		}
 		
