@@ -37,7 +37,7 @@
 		A6529E82246C484100763DE0 /* QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
 		A6529E84246DC02900763DE0 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		A6529E86246EC89700763DE0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		A6C2EE662460495A00D44D21 /* theCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = theCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C2EE662460495A00D44D21 /* The Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Cat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C2EE692460495A00D44D21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6C2EE6B2460495A00D44D21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A6C2EE6D2460495A00D44D21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		A6C2EE672460495A00D44D21 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A6C2EE662460495A00D44D21 /* theCat.app */,
+				A6C2EE662460495A00D44D21 /* The Cat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 			);
 			name = theCat;
 			productName = theCat;
-			productReference = A6C2EE662460495A00D44D21 /* theCat.app */;
+			productReference = A6C2EE662460495A00D44D21 /* The Cat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -377,7 +377,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.product.theCat;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The Cat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -396,7 +396,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.product.theCat;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The Cat";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
