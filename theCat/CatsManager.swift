@@ -6,7 +6,7 @@
 //  Copyright © 2020 Aleksandr Maltsev. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CatsManagerDelegate: class {
 	func didUpdateCatsList(newCats: [Cat])
@@ -41,5 +41,22 @@ class CatsManager {
 								rightAnswer: options[randomNum],
 								breedId: fourCats[randomNum].id)
 		return question
+	}
+	
+	func getImageBy(breedId: String, handler: @escaping (UIImage?) -> ()) {
+		catsApi.getImageByBreed(id: breedId) { catImage in
+			if let stringUrl = catImage?.url, let url = URL(string: stringUrl) {
+				do {
+					let imageData = try Data(contentsOf: url)
+					let image = UIImage(data: imageData)
+					handler(image)
+				} catch let error {
+					print(error.localizedDescription)
+					handler(nil)
+				}
+			} else {
+				handler(nil)
+			}
+		}
 	}
 }

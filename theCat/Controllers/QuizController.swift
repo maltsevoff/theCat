@@ -27,7 +27,6 @@ class QuizController: UIViewController {
 		self.checkAnswer(sender.answer!)
 	}
 	
-	private let catsApi = CatsApiRequests()
 	private let catsManager = CatsManager()
 	private let alertMessage = "Ouuups... Something went wrong. Let's playe another time."
 	private var question: Question?
@@ -100,7 +99,7 @@ class QuizController: UIViewController {
 	private func loadImageFor(breedId: String) {
 		self.questionImageView.image = nil
 		self.startLoadingAnimation()
-		catsApi.getImageByBreed(id: breedId) { image in
+		catsManager.getImageBy(breedId: breedId) { image in
 			DispatchQueue.main.async {
 				self.stopLoadingAnimation()
 				if let validImage = image {
