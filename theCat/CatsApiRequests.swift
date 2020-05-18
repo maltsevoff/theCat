@@ -15,11 +15,10 @@ class CatsApiRequests {
 	private let baseUrl = "https://api.thecatapi.com/v1/"
 	
 	func getBreeds(handler: @escaping ([Cat]) -> ()) {
-		let stringUrl = self.baseUrl + "breeds"
+		let stringUrl = self.baseUrl + "breeds?x-api-key=\(apiKey)"
 		guard let url = URL(string: stringUrl) else { return }
 		
-		var request = URLRequest(url: url)
-		request.addValue("x-api-key", forHTTPHeaderField: self.apiKey)
+		let request = URLRequest(url: url)
 		let task = URLSession.shared.dataTask(with: request) { data, res, error in
 			if let data = data {
 				let decoder = JSONDecoder()
