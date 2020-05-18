@@ -11,7 +11,6 @@ import Foundation
 class CatsApiRequests {
 	
 	private let apiKey = "d72986b8-2222-454c-b65e-6b2e26421af3"
-	private let breedsUrl = "https://api.thecatapi.com/v1/breeds"
 	private let baseUrl = "https://api.thecatapi.com/v1/"
 	
 	func getBreeds(handler: @escaping ([Cat]) -> ()) {
