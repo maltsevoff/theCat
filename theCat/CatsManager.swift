@@ -16,7 +16,7 @@ var cats: [Cat] = []
 
 class CatsManager {
 	
-	var delegate: CatsManagerDelegate?
+	weak var delegate: CatsManagerDelegate?
 	
 	private var catsApi = CatsApiRequests()
 	
